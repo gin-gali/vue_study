@@ -24,7 +24,7 @@
 }
 
 .tab__label li a.active {
-  background: #E6F0FF;
+  background: #e6f0ff;
 }
 
 .tab__label li a:not(.active):hover {
@@ -34,7 +34,7 @@
 }
 
 .tab__content {
-  background: #E6F0FF;
+  background: #e6f0ff;
   font-size: 16px;
   min-height: 150px;
   padding: 15px;
