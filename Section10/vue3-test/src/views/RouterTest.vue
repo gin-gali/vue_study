@@ -1,36 +1,34 @@
 <template>
-    <div>
-        RouterTest
-    </div>
-    <button @click="goHome">ホームに戻る</button>
-    <button @click="checkRoutePath">今のルート情報</button>
+  <div>RouterTest</div>
+  <button @click="goHome">ホームに戻る</button>
+  <button @click="checkRoutePath">今のルート情報</button>
 </template>
 
 <script>
-import { useRouter, useRoute, onBeforeRouteLeave } from 'vue-router'
+import { useRouter, useRoute, onBeforeRouteLeave } from "vue-router";
 
 export default {
   setup() {
-      const router = useRouter()
-      const route = useRoute()
+    const router = useRouter();
+    const route = useRoute();
 
-      const goHome = () => {
-          router.push('/')
-      }
+    const goHome = () => {
+      router.push("/");
+    };
 
-      const checkRoutePath = () => {
-          console.log(route.path);
-      }
+    const checkRoutePath = () => {
+      console.log(route.path);
+    };
 
-      onBeforeRouteLeave((to, from) => {
-          console.log(`to: ${to}`)
-          console.log(`from: ${from}`)
-      })
+    onBeforeRouteLeave((to, from) => {
+      console.log(`to: ${to}`);
+      console.log(`from: ${from}`);
+    });
 
-      return {
-          goHome,
-          checkRoutePath
-      }
-  }
-}
+    return {
+      goHome,
+      checkRoutePath,
+    };
+  },
+};
 </script>

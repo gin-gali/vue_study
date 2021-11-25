@@ -10,57 +10,65 @@
   <p>reactiveToRefs: {{ authorRef[1] }}</p>
   <button @click="btnClick">おして</button>
   <p>computed: {{ totalPrice }}</p>
-  <div>watch: <input v-model="search"></div>
-  <div>watchEffect: <input v-model="searchEffect"></div>
+  <div>watch: <input v-model="search" /></div>
+  <div>watchEffect: <input v-model="searchEffect" /></div>
 </template>
 
 <script>
-import { ref, reactive, toRefs, computed, watch, watchEffect, onMounted  } from 'vue'
+import {
+  ref,
+  reactive,
+  toRefs,
+  computed,
+  watch,
+  watchEffect,
+  onMounted,
+} from "vue";
 
 export default {
   setup() {
-    let name = 'Otani'
-    const age = 30
-    const nameRef = ref('錦織圭')
+    let name = "Otani";
+    const age = 30;
+    const nameRef = ref("錦織圭");
 
     const book = reactive({
-      title: 'title',
-      author: ['Otani', 'ito']
-    })
+      title: "title",
+      author: ["Otani", "ito"],
+    });
 
     const bookToRefs = reactive({
-      titleRef: 'title2',
-      authorRef: ['Otani2', 'ito2']
-    })
+      titleRef: "title2",
+      authorRef: ["Otani2", "ito2"],
+    });
 
     const btnClick = () => {
-      console.log('click');
-    }
+      console.log("click");
+    };
 
     const item = reactive({
       price: 100,
-      number: 1
-    })
+      number: 1,
+    });
 
     const totalPrice = computed(() => {
-      return item.price * item.number
-    })
+      return item.price * item.number;
+    });
 
-    const search = ref('')
+    const search = ref("");
     watch(search, (newValue, prevValue) => {
       console.log(`watch: ${search.value}`);
       console.log(`new: ${newValue}`);
       console.log(`prev: ${prevValue}`);
-    })
+    });
 
-    const searchEffect = ref('')
-    watchEffect(()=>{
+    const searchEffect = ref("");
+    watchEffect(() => {
       console.log(`watchEffect: ${searchEffect.value}`);
-    })
+    });
 
     onMounted(() => {
-      console.log('onMounted');
-    })
+      console.log("onMounted");
+    });
 
     console.log("setup");
     return {
@@ -73,14 +81,14 @@ export default {
       item,
       totalPrice,
       search,
-      searchEffect
-    }
+      searchEffect,
+    };
   },
   data() {
     return {
       number: 1,
-      sports: "soccer"
-    }
+      sports: "soccer",
+    };
   },
   created() {
     console.log("created");
@@ -92,5 +100,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
