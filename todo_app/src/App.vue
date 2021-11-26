@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Header />
-    <Todos :todos="items"/>
+    <Todos :todos="items" />
     <addButton msg="追加" />
   </div>
 </template>

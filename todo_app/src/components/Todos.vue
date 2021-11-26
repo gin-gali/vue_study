@@ -8,10 +8,8 @@
 <script>
 export default {
   props: {
-    todos: Array
+    todos: Array,
   },
-  setup(props) {
-    
-  }
-}
+  setup(props) {},
+};
 </script>

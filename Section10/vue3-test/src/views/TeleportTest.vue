@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import ModalButton from "@/components/ModalButton";
+import ModalButton from '@/components/ModalButton';
 
 export default {
   components: {
-    ModalButton,
-  },
+    ModalButton
+  }
 };
 </script>
 

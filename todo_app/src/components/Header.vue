@@ -8,8 +8,8 @@
 export default {
   data() {
     return {
-      title: "Todo List"
-    }
+      title: "Todo List",
+    };
   },
 };
 </script>

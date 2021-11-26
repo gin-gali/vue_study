@@ -1,14 +1,12 @@
 <template>
   <div>
-    <input>
+    <input />
     <button></button>
   </div>
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref } from "vue";
 
-export default {
-  
-}
+export default {};
 </script>

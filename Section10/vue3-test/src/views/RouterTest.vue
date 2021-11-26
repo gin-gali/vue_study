@@ -5,30 +5,30 @@
 </template>
 
 <script>
-import { useRouter, useRoute, onBeforeRouteLeave } from "vue-router";
+import { useRouter, useRoute, onBeforeRouteLeave } from 'vue-router'
 
 export default {
   setup() {
-    const router = useRouter();
-    const route = useRoute();
+    const router = useRouter()
+    const route = useRoute()
 
     const goHome = () => {
-      router.push("/");
-    };
+      router.push('/')
+    }
 
     const checkRoutePath = () => {
-      console.log(route.path);
-    };
+      console.log(route.path)
+    }
 
     onBeforeRouteLeave((to, from) => {
-      console.log(`to: ${to}`);
-      console.log(`from: ${from}`);
-    });
+      console.log(`to: ${to}`)
+      console.log(`from: ${from}`)
+    })
 
     return {
       goHome,
-      checkRoutePath,
-    };
-  },
-};
+      checkRoutePath
+    }
+  }
+}
 </script>

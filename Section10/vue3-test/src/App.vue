@@ -17,49 +17,49 @@
   />
 </template>
 <script>
-import { reactive } from "vue";
+import { reactive } from 'vue'
 export default {
   setup() {
     const setupBooks = reactive([
       {
-        title: "setupTitle1",
-        author: "setupAuthor1",
+        title: 'setupTitle1',
+        author: 'setupAuthor1'
       },
       {
-        title: "setupTitle2",
-        author: "setupAuthor2",
-      },
-    ]);
+        title: 'setupTitle2',
+        author: 'setupAuthor2'
+      }
+    ])
 
     return {
-      setupBooks,
-    };
+      setupBooks
+    }
   },
   data() {
     return {
       dataBooks: [
         {
-          title: "dataTitle1",
-          author: "dataAuthor1",
+          title: 'dataTitle1',
+          author: 'dataAuthor1'
         },
         {
-          title: "dataTitle2",
-          author: "dataAuthor2",
-        },
-      ],
-    };
+          title: 'dataTitle2',
+          author: 'dataAuthor2'
+        }
+      ]
+    }
   },
   methods: {
     parentMethod(e) {
-      console.log(e);
-    },
+      console.log(e)
+    }
   },
   provide() {
     return {
-      userName: "oya de settei sita atai",
-    };
-  },
-};
+      userName: 'oya de settei sita atai'
+    }
+  }
+}
 </script>
 <style>
 #app {
