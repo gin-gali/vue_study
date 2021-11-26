@@ -8,6 +8,7 @@
     <router-link to="/props-emit-test">PropsEmit</router-link> |
     <router-link to="/function-test">Function</router-link> |
     <router-link to="/router-test">Router</router-link> |
+    <router-link to="/talk">Talk</router-link> |
   </div>
   <router-view
     :setupBooks="setupBooks"

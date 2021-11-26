@@ -6,6 +6,7 @@ import CompositionTest from "@/views/CompositionTest";
 import PropsEmitTest from "@/views/PropsEmitTest";
 import FunctionTest from "@/views/FunctionTest";
 import RouterTest from "@/views/RouterTest";
+import Talk from "@/views/Talk";
 
 const routes = [
   {
@@ -52,6 +53,11 @@ const routes = [
     name: "RouterTest",
     component: RouterTest,
   },
+  {
+    path: "/talk",
+    name: "Talk",
+    component: Talk,
+  }
 ];
 
 const router = createRouter({
