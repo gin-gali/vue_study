@@ -4,13 +4,13 @@
 </template>
 
 <script>
-import GrandChildren from "@/components/GrandChildren";
+import GrandChildren from '@/components/GrandChildren'
 
 export default {
   components: {
-    GrandChildren,
-  },
-};
+    GrandChildren
+  }
+}
 </script>
 
 <style></style>

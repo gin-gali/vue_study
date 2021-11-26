@@ -6,8 +6,8 @@
 <script>
 export default {
   data() {},
-  inject: ["userName"],
-};
+  inject: ['userName']
+}
 </script>
 
 <style></style>

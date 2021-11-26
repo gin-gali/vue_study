@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import { reactive } from "vue";
-import useCounter from "@/composables/useCounter";
+import { reactive } from 'vue'
+import useCounter from '@/composables/useCounter'
 
 // const useCounter = (item) => {
 //   const increment = () => {
@@ -35,19 +35,19 @@ import useCounter from "@/composables/useCounter";
 export default {
   setup() {
     const item = reactive({
-      name: "商品名",
+      name: '商品名',
       price: 100,
-      amount: 0,
-    });
+      amount: 0
+    })
 
-    const { increment, decrement, totalPrice } = useCounter(item);
+    const { increment, decrement, totalPrice } = useCounter(item)
 
     return {
       item,
       increment,
       decrement,
-      totalPrice,
-    };
-  },
-};
+      totalPrice
+    }
+  }
+}
 </script>

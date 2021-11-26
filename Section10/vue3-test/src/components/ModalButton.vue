@@ -16,10 +16,10 @@
 export default {
   data() {
     return {
-      modalOpen: false,
-    };
-  },
-};
+      modalOpen: false
+    }
+  }
+}
 </script>
 <style scoped>
 .relative {

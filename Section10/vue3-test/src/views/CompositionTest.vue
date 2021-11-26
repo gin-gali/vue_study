@@ -22,55 +22,55 @@ import {
   computed,
   watch,
   watchEffect,
-  onMounted,
-} from "vue";
+  onMounted
+} from 'vue'
 
 export default {
   setup() {
-    let name = "Otani";
-    const age = 30;
-    const nameRef = ref("錦織圭");
+    let name = 'Otani'
+    const age = 30
+    const nameRef = ref('錦織圭')
 
     const book = reactive({
-      title: "title",
-      author: ["Otani", "ito"],
-    });
+      title: 'title',
+      author: ['Otani', 'ito']
+    })
 
     const bookToRefs = reactive({
-      titleRef: "title2",
-      authorRef: ["Otani2", "ito2"],
-    });
+      titleRef: 'title2',
+      authorRef: ['Otani2', 'ito2']
+    })
 
     const btnClick = () => {
-      console.log("click");
-    };
+      console.log('click')
+    }
 
     const item = reactive({
       price: 100,
-      number: 1,
-    });
+      number: 1
+    })
 
     const totalPrice = computed(() => {
-      return item.price * item.number;
-    });
+      return item.price * item.number
+    })
 
-    const search = ref("");
+    const search = ref('')
     watch(search, (newValue, prevValue) => {
-      console.log(`watch: ${search.value}`);
-      console.log(`new: ${newValue}`);
-      console.log(`prev: ${prevValue}`);
-    });
+      console.log(`watch: ${search.value}`)
+      console.log(`new: ${newValue}`)
+      console.log(`prev: ${prevValue}`)
+    })
 
-    const searchEffect = ref("");
+    const searchEffect = ref('')
     watchEffect(() => {
-      console.log(`watchEffect: ${searchEffect.value}`);
-    });
+      console.log(`watchEffect: ${searchEffect.value}`)
+    })
 
     onMounted(() => {
-      console.log("onMounted");
-    });
+      console.log('onMounted')
+    })
 
-    console.log("setup");
+    console.log('setup')
     return {
       name,
       age,
@@ -81,23 +81,23 @@ export default {
       item,
       totalPrice,
       search,
-      searchEffect,
-    };
+      searchEffect
+    }
   },
   data() {
     return {
       number: 1,
-      sports: "soccer",
-    };
+      sports: 'soccer'
+    }
   },
   created() {
-    console.log("created");
-    console.log(this);
+    console.log('created')
+    console.log(this)
   },
   mounted() {
-    console.log("mounted");
-  },
-};
+    console.log('mounted')
+  }
+}
 </script>
 
 <style></style>
