@@ -1,5 +1,5 @@
 <template>
-  <div v-for="todo in todos" :key="todo.id">
+  <div v-for="todo in todoData" :key="todo.id">
     <h3>{{ todo.todoName }}</h3>
     <p>{{ todo.createAt }}</p>
   </div>
@@ -7,9 +7,10 @@
 
 <script>
 export default {
-  props: {
-    todos: Array
-  },
-  setup(props) {}
+  data() {
+    return {
+      todoData: []
+    }
+  }
 }
 </script>
