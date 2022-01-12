@@ -1,7 +1,6 @@
 <template>
   <div v-for="todo in todoData" :key="todo.id">
     <h3>{{ todo.todoName }}</h3>
-    <p>{{ todo.createAt }}</p>
   </div>
 </template>
 
