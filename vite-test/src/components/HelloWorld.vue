@@ -9,7 +9,8 @@ const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <img alt="Vue logo" src="../assets/logo.png" />
+  <h1>Hello Vue 3 + Vite</h1>
 
   <p>
     Recommended IDE setup:
